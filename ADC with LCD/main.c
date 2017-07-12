@@ -4,8 +4,11 @@
 #include<string.h>
 void main() {
 	adc_init();
+// PORTD is used for LCD Data transfer		
 		DDRD = 0xff;
+// PORTC is used for setting values of EN , RS , RW
 		DDRC = 0xff;
+//PORTB is set high and used as input power for LCD Backlight 
 		DDRB= 0xff;
 		PORTB = 0x01;
 		int i = 0;
